@@ -1,14 +1,16 @@
-const toggleBtn = document.querySelector(".toggleBtn");
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
 
-const slidebar = document.querySelector(".slidebar");
+toggleBtn.addEventListener("click", function () {
+  // if (sidebar.classList.contains("show-sidebar")) {
+  //   sidebar.classList.remove("show-sidebar");
+  // } else {
+  //   sidebar.classList.add("show-sidebar");
+  // }
+  sidebar.classList.toggle("show-sidebar");
+});
 
-const slideClose = document.querySelector(".slideClose");
-
-toggleBtn.addEventListener("click", ()=>{
-    slidebar.classList.toggle("show-sidebar")
-})
-
-slideClose.addEventListener("click", ()=>{
-    slidebar.classList.remove("show-sidebar")
-})
-
+closeBtn.addEventListener("click", function () {
+  sidebar.classList.remove("show-sidebar");
+});
